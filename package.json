@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/TicketeStartup/mailup-node-api#readme",
   "dependencies": {
-    "request": "^2.74.0",
-    "sync": "^0.2.5"
+    "request": "^2.74.0"
   }
 }
