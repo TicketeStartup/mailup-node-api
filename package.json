@@ -1,0 +1,25 @@
+{
+  "name": "mailup",
+  "version": "0.0.1",
+  "description": " MailUp Dev REST API wrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TicketeStartup/mailup-node-api.git"
+  },
+  "keywords": [
+    "mailup",
+    "REST",
+    "API",
+    "node"
+  ],
+  "author": "Andrea Giglio <andrea-giglio@live.it>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TicketeStartup/mailup-node-api/issues"
+  },
+  "homepage": "https://github.com/TicketeStartup/mailup-node-api#readme"
+}
