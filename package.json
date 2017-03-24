@@ -1,6 +1,6 @@
 {
   "name": "mailup",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": " MailUp Dev REST API wrap",
   "main": "index.js",
   "scripts": {
