@@ -8,7 +8,7 @@
 
 ## Installation ##
 
-`npm install mailup`
+`npm i mailup --save`
 
 ## Usage ##
 
@@ -96,3 +96,65 @@ You can use this method to call the MailUp API present in the official documenta
             else console.log("callApi r", r);
         })
 
+
+### Step 3: Examples ###
+
+
+		client.logOnWithUsernamePassword({
+		   username: "mXXXXX",
+		   password: "XXXXXXXXXX"
+		}, (err, tokens) => {
+		   console.log("_mailUp OBJ", client);
+		  
+		     client.callApi({
+		        url: "https://services.mailup.com/API/v1.1/Rest/ConsoleService.svc/Console/Authentication/Info",
+		        verb: "GET"
+		    }, (err, r) => {
+		        // do something
+		    });
+		    client.callApi({
+		        url: "https://services.mailup.com/API/v1.1/Rest/ConsoleService.svc/Console/User/Lists",
+		        verb: "GET"
+		    }, (err, r) => {
+		         // do something
+		    });
+		    client.callApi({
+		        url: "https://services.mailup.com/API/v1.1/Rest/ConsoleService.svc/Console/List/1/Groups",
+		        verb: "GET"
+		    }, (err, r) => {
+		         // do something
+		    });
+		    
+		    client.callApi({
+	            url: https://services.mailup.com/API/v1.1/Rest/ConsoleService.svc/Console/Group/5/Recipient",
+	            verb: "POST",
+	            body:{
+	             "Name": "Andrea Giglio",
+	       		"Email": "andrea-giglio@live.it",
+	       		"MobileNumber": "0000000000",
+	       		"Fields": [{
+	                "Description": "userAgent",
+	                "Id": 28,
+	                "Value": "iOS"
+	           	 }]
+	           },
+           	contentType: "JSON"
+        }, (err, mailupUserId) => {
+            // do something 
+            // user id 37411 (RecipientId)
+        });
+		
+		    client.callApi({
+		        url: "https://services.mailup.com/API/v1.1/Rest/ConsoleService.svc/Console/Group/5/Recipients",
+		        verb: "GET"
+		    }, (err, r) => {
+		        // do something
+		    });
+			});
+		
+			client.callApi({
+		        url: "https://services.mailup.com/API/v1.1/Rest/ConsoleService.svc/Console/Group/5/Unsubscribe/37411",
+		        verb: "DELETE"
+		    }, (err, r) => {
+		         // do something
+		    });
