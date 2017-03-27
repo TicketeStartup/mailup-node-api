@@ -53,7 +53,7 @@ Request(exmp):
 
 Responce(exmp):
 
-		http://localhost/mailUp/code?code=YYYYYYYYY&token_type=bearer&expires_in=3600
+	http://localhost/mailUp/code?code=YYYYYYYYY&token_type=bearer&expires_in=3600
 
 
 ``Login with code``:	
@@ -144,8 +144,8 @@ You can use this method to call the MailUp API present in the official documenta
             // user id 37411 (RecipientId)
         });
 		
-		    client.callApi({
-		        url: "https://services.mailup.com/API/v1.1/Rest/ConsoleService.svc/Console/Group/5/Recipients",
+	client.callApi({
+	url: "https://services.mailup.com/API/v1.1/Rest/ConsoleService.svc/Console/Group/5/Recipients",
 		        verb: "GET"
 		    }, (err, r) => {
 		        // do something
